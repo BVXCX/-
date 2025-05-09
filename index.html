@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إضافة قصة جديدة</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>إضافة قصة جديدة</h1>
+        <form id="story-form">
+            <div class="form-group">
+                <label for="title">عنوان القصة:</label>
+                <input type="text" id="title" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="author">اسم الكاتب:</label>
+                <input type="text" id="author" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="genre">نوع القصة:</label>
+                <input type="text" id="genre" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="content">محتوى القصة:</label>
+                <textarea id="content" rows="10" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="story-image">اسم ملف صورة القصة (بدون مسار):</label>
+                <input type="text" id="story-image" placeholder="مثال: story1.jpg">
+            </div>
+            
+            <div class="form-group">
+                <label for="author-image">اسم ملف صورة الكاتب (بدون مسار):</label>
+                <input type="text" id="author-image" placeholder="مثال: author1.jpg">
+            </div>
+            
+            <button type="submit">حفظ القصة</button>
+        </form>
+        
+        <div id="output" class="hidden">
+            <h2>تم إنشاء القصة بنجاح!</h2>
+            <div class="code-container">
+                <h3>ملف القصة الكاملة:</h3>
+                <pre id="full-story-code"></pre>
+                <button class="copy-btn" onclick="copyCode('full-story-code')">نسخ الكود</button>
+            </div>
+            
+            <div class="code-container">
+                <h3>ملف العناوين:</h3>
+                <pre id="addresses-code"></pre>
+                <button class="copy-btn" onclick="copyCode('addresses-code')">نسخ الكود</button>
+            </div>
+            
+            <a href="./view-stories.html" class="view-link">عرض جميع القصص</a>
+        </div>
+    </div>
+
+    <script src="./story-manager.js"></script>
+</body>
+</html>
