@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض القصص</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>القصص المضافة</h1>
+        <div id="stories-list" class="stories-list">
+            <!-- سيتم ملؤها بالجافاسكريبت -->
+        </div>
+        
+        <div id="story-details" class="hidden">
+            <h2 id="detail-title"></h2>
+            <div class="detail-item">
+                <strong>الكاتب:</strong> <span id="detail-author"></span>
+            </div>
+            <div class="detail-item">
+                <strong>النوع:</strong> <span id="detail-genre"></span>
+            </div>
+            <div class="detail-item">
+                <strong>المحتوى:</strong>
+                <div id="detail-content" class="content-box"></div>
+            </div>
+            
+            <div class="code-container">
+                <h3>كود JSON الكامل:</h3>
+                <pre id="detail-code"></pre>
+                <button class="copy-btn" onclick="copyCode('detail-code')">نسخ الكود</button>
+            </div>
+            
+            <button onclick="hideDetails()" class="back-btn">العودة للقائمة</button>
+        </div>
+        
+        <a href="./add-story.html" class="add-link">إضافة قصة جديدة</a>
+    </div>
+
+    <script src="./story-manager.js"></script>
+</body>
+</html>
